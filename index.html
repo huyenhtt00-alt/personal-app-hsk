@@ -1,3 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HSK App</title>
+
+<style>
+body { font-family: Arial; text-align: center; margin-top: 40px; }
+.card { border: 1px solid #ccc; padding: 30px; display: inline-block; cursor: pointer; }
+button { margin: 10px; padding: 10px 20px; }
+</style>
+
+</head>
+
+<body>
+
+<h2>HSK App</h2>
+
+<!-- LESSON BUTTON -->
+<div>
+  <button onclick="changeLesson('lesson1')">Lesson 1</button>
+  <button onclick="changeLesson('lesson2')">Lesson 2</button>
+</div>
+
+<!-- CARD -->
+<div class="card" onclick="flipCard()">
+  <h1 id="hanzi"></h1>
+  <p id="pinyin"></p>
+  <p id="meaning"></p>
+</div>
+
+<br>
+
+<button onclick="playAudio()">🔊 Play</button>
+<button onclick="nextCard()">Next</button>
+
 <script>
 let lessons = {};
 let currentLesson = "lesson1";
@@ -28,14 +64,12 @@ function flipCard() {
   loadCard();
 }
 
-// 🔊 AUDIO
 function playAudio() {
   const word = lessons[currentLesson][index];
   let audio = new Audio(word.audio);
   audio.play();
 }
 
-// NEXT
 function nextCard() {
   index++;
   show = false;
@@ -48,9 +82,11 @@ function nextCard() {
   loadCard();
 }
 
-// CHANGE LESSON
 function changeLesson(l) {
   currentLesson = l;
   loadLesson();
 }
 </script>
+
+</body>
+</html>
