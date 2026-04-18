@@ -1,0 +1,34 @@
+{
+  "lesson1": [
+    {
+      "hanzi": "你好",
+      "pinyin": "nǐ hǎo",
+      "en": "hello",
+      "vi": "xin chào",
+      "audio": "https://translate.google.com/translate_tts?ie=UTF-8&q=你好&tl=zh&client=tw-ob"
+    },
+    {
+      "hanzi": "谢谢",
+      "pinyin": "xiè xie",
+      "en": "thank you",
+      "vi": "cảm ơn",
+      "audio": "https://translate.google.com/translate_tts?ie=UTF-8&q=谢谢&tl=zh&client=tw-ob"
+    }
+  ],
+  "lesson2": [
+    {
+      "hanzi": "一",
+      "pinyin": "yī",
+      "en": "one",
+      "vi": "một",
+      "audio": "https://translate.google.com/translate_tts?ie=UTF-8&q=一&tl=zh&client=tw-ob"
+    },
+    {
+      "hanzi": "二",
+      "pinyin": "èr",
+      "en": "two",
+      "vi": "hai",
+      "audio": "https://translate.google.com/translate_tts?ie=UTF-8&q=二&tl=zh&client=tw-ob"
+    }
+  ]
+}
