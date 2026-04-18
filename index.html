@@ -1,128 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>HSK App</title>
-
-<style>
-body {
-  font-family: Arial;
-  text-align: center;
-  background: #f7f7f7;
-}
-
-.container {
-  max-width: 400px;
-  margin: auto;
-  margin-top: 40px;
-}
-
-.progress {
-  height: 10px;
-  background: #ddd;
-  border-radius: 10px;
-  overflow: hidden;
-  margin-bottom: 20px;
-}
-
-.progress-bar {
-  height: 100%;
-  width: 0%;
-  background: #58cc02;
-}
-
-.card {
-  background: white;
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  cursor: pointer;
-}
-
-button {
-  padding: 12px 20px;
-  margin: 10px;
-  border: none;
-  border-radius: 10px;
-  font-size: 16px;
-}
-
-.correct { background: #58cc02; color: white; }
-.wrong { background: #ff4b4b; color: white; }
-.next { background: #1cb0f6; color: white; }
-
-.lang {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
-</style>
-
-</head>
-<body>
-
-<div class="lang">
-  <button onclick="setLang('en')">EN</button>
-  <button onclick="setLang('vi')">VI</button>
-</div>
-
-<div class="container">
-
-<h2 id="title">HSK 1-2</h2>
-
-<div class="progress">
-  <div class="progress-bar" id="progressBar"></div>
-</div>
-
-<div class="card" onclick="flipCard()">
-  <h1 id="hanzi"></h1>
-  <p id="pinyin"></p>
-  <p id="meaning"></p>
-</div>
-
-<div id="buttons">
-  <button class="wrong" onclick="answer(false)" id="wrongBtn">Wrong</button>
-  <button class="correct" onclick="answer(true)" id="correctBtn">Correct</button>
-</div>
-
-<button class="next" onclick="nextCard()" id="nextBtn" style="display:none;">Next</button>
-
-<p id="score">Score: 0</p>
-
-</div>
-
 <script>
-let lang = "en";
-
-const vocab = [
-  { hanzi: "你好", pinyin: "nǐ hǎo", en: "hello", vi: "xin chào" },
-  { hanzi: "谢谢", pinyin: "xiè xie", en: "thank you", vi: "cảm ơn" },
-  { hanzi: "再见", pinyin: "zài jiàn", en: "goodbye", vi: "tạm biệt" }
-];
-
+let lessons = {};
+let currentLesson = "lesson1";
 let index = 0;
 let show = false;
-let score = 0;
 
-function setLang(l) {
-  lang = l;
-  updateUI();
+fetch("vocab.json")
+  .then(res => res.json())
+  .then(data => {
+    lessons = data;
+    loadLesson();
+  });
+
+function loadLesson() {
+  index = 0;
   loadCard();
 }
 
-function updateUI() {
-  document.getElementById("wrongBtn").innerText = lang === "en" ? "Wrong" : "Sai";
-  document.getElementById("correctBtn").innerText = lang === "en" ? "Correct" : "Đúng";
-  document.getElementById("nextBtn").innerText = lang === "en" ? "Next" : "Tiếp";
-  document.getElementById("title").innerText = "HSK 1-2";
-}
-
 function loadCard() {
-  const word = vocab[index];
+  const word = lessons[currentLesson][index];
   document.getElementById("hanzi").innerText = word.hanzi;
   document.getElementById("pinyin").innerText = show ? word.pinyin : "";
-  document.getElementById("meaning").innerText = show ? word[lang] : "";
-  updateProgress();
+  document.getElementById("meaning").innerText = show ? word.en : "";
 }
 
 function flipCard() {
@@ -130,40 +28,29 @@ function flipCard() {
   loadCard();
 }
 
-function answer(correct) {
-  if (correct) score++;
-
-  document.getElementById("score").innerText = 
-    (lang === "en" ? "Score: " : "Điểm: ") + score;
-
-  document.getElementById("buttons").style.display = "none";
-  document.getElementById("nextBtn").style.display = "inline-block";
+// 🔊 AUDIO
+function playAudio() {
+  const word = lessons[currentLesson][index];
+  let audio = new Audio(word.audio);
+  audio.play();
 }
 
+// NEXT
 function nextCard() {
   index++;
   show = false;
 
-  document.getElementById("buttons").style.display = "block";
-  document.getElementById("nextBtn").style.display = "none";
-
-  if (index >= vocab.length) {
-    alert(lang === "en" ? "Lesson completed 🎉" : "Hoàn thành 🎉");
+  if (index >= lessons[currentLesson].length) {
+    alert("Lesson done!");
     index = 0;
-    score = 0;
   }
 
   loadCard();
 }
 
-function updateProgress() {
-  let percent = ((index + 1) / vocab.length) * 100;
-  document.getElementById("progressBar").style.width = percent + "%";
+// CHANGE LESSON
+function changeLesson(l) {
+  currentLesson = l;
+  loadLesson();
 }
-
-updateUI();
-loadCard();
 </script>
-
-</body>
-</html>
