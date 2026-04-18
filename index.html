@@ -56,11 +56,20 @@ let index = 0;
 let show = false;
 
 // LOAD DATA
-fetch("vocab.json")
-  .then(res => res.json())
+fetch("./vocab.json")
+  .then(res => {
+    if (!res.ok) {
+      throw new Error("HTTP error " + res.status);
+    }
+    return res.json();
+  })
   .then(data => {
     lessons = data;
     loadLesson();
+  })
+  .catch(err => {
+    console.error("Fetch error:", err);
+    alert("Failed to load vocab.json. Check file name & location.");
   });
 
 // LOAD LESSON
