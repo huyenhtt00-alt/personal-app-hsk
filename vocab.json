@@ -1,73 +1,102 @@
 {
   "lesson1": [
-    {"hanzi":"你好","pinyin":"nǐ hǎo","en":"hello","audio":"https://translate.google.com/translate_tts?ie=UTF-8&q=你好&tl=zh&client=tw-ob"},
-    {"hanzi":"再见","pinyin":"zài jiàn","en":"goodbye","audio":"https://translate.google.com/translate_tts?ie=UTF-8&q=再见&tl=zh&client=tw-ob"},
-    {"hanzi":"谢谢","pinyin":"xiè xie","en":"thank you","audio":"https://translate.google.com/translate_tts?ie=UTF-8&q=谢谢&tl=zh&client=tw-ob"},
-    {"hanzi":"不客气","pinyin":"bú kè qi","en":"you're welcome","audio":"https://translate.google.com/translate_tts?ie=UTF-8&q=不客气&tl=zh&client=tw-ob"}
+    {"hanzi":"你好","pinyin":"nǐ hǎo","en":"hello"},
+    {"hanzi":"再见","pinyin":"zài jiàn","en":"goodbye"},
+    {"hanzi":"谢谢","pinyin":"xiè xie","en":"thank you"},
+    {"hanzi":"不客气","pinyin":"bú kè qi","en":"you're welcome"},
+    {"hanzi":"请","pinyin":"qǐng","en":"please"},
+    {"hanzi":"对不起","pinyin":"duì bu qǐ","en":"sorry"},
+    {"hanzi":"没关系","pinyin":"méi guān xi","en":"it's ok"}
   ],
 
   "lesson2": [
-    {"hanzi":"一","pinyin":"yī","en":"one","audio":"https://translate.google.com/translate_tts?ie=UTF-8&q=一&tl=zh&client=tw-ob"},
-    {"hanzi":"二","pinyin":"èr","en":"two","audio":"https://translate.google.com/translate_tts?ie=UTF-8&q=二&tl=zh&client=tw-ob"},
-    {"hanzi":"三","pinyin":"sān","en":"three","audio":"https://translate.google.com/translate_tts?ie=UTF-8&q=三&tl=zh&client=tw-ob"},
-    {"hanzi":"四","pinyin":"sì","en":"four","audio":"https://translate.google.com/translate_tts?ie=UTF-8&q=四&tl=zh&client=tw-ob"},
-    {"hanzi":"五","pinyin":"wǔ","en":"five","audio":"https://translate.google.com/translate_tts?ie=UTF-8&q=五&tl=zh&client=tw-ob"}
+    {"hanzi":"一","pinyin":"yī","en":"one"},
+    {"hanzi":"二","pinyin":"èr","en":"two"},
+    {"hanzi":"三","pinyin":"sān","en":"three"},
+    {"hanzi":"四","pinyin":"sì","en":"four"},
+    {"hanzi":"五","pinyin":"wǔ","en":"five"},
+    {"hanzi":"六","pinyin":"liù","en":"six"},
+    {"hanzi":"七","pinyin":"qī","en":"seven"},
+    {"hanzi":"八","pinyin":"bā","en":"eight"},
+    {"hanzi":"九","pinyin":"jiǔ","en":"nine"},
+    {"hanzi":"十","pinyin":"shí","en":"ten"}
   ],
 
   "lesson3": [
-    {"hanzi":"我","pinyin":"wǒ","en":"I","audio":"https://translate.google.com/translate_tts?ie=UTF-8&q=我&tl=zh&client=tw-ob"},
-    {"hanzi":"你","pinyin":"nǐ","en":"you","audio":"https://translate.google.com/translate_tts?ie=UTF-8&q=你&tl=zh&client=tw-ob"},
-    {"hanzi":"他","pinyin":"tā","en":"he","audio":"https://translate.google.com/translate_tts?ie=UTF-8&q=他&tl=zh&client=tw-ob"},
-    {"hanzi":"她","pinyin":"tā","en":"she","audio":"https://translate.google.com/translate_tts?ie=UTF-8&q=她&tl=zh&client=tw-ob"},
-    {"hanzi":"它","pinyin":"tā","en":"it","audio":"https://translate.google.com/translate_tts?ie=UTF-8&q=它&tl=zh&client=tw-ob"}
+    {"hanzi":"我","pinyin":"wǒ","en":"I"},
+    {"hanzi":"你","pinyin":"nǐ","en":"you"},
+    {"hanzi":"他","pinyin":"tā","en":"he"},
+    {"hanzi":"她","pinyin":"tā","en":"she"},
+    {"hanzi":"它","pinyin":"tā","en":"it"},
+    {"hanzi":"我们","pinyin":"wǒ men","en":"we"},
+    {"hanzi":"你们","pinyin":"nǐ men","en":"you (plural)"},
+    {"hanzi":"他们","pinyin":"tā men","en":"they"}
+  ],
+
+  "lesson4": [
+    {"hanzi":"是","pinyin":"shì","en":"to be"},
+    {"hanzi":"不是","pinyin":"bú shì","en":"not be"},
+    {"hanzi":"有","pinyin":"yǒu","en":"to have"},
+    {"hanzi":"没有","pinyin":"méi yǒu","en":"not have"},
+    {"hanzi":"在","pinyin":"zài","en":"at"},
+    {"hanzi":"这","pinyin":"zhè","en":"this"},
+    {"hanzi":"那","pinyin":"nà","en":"that"}
+  ],
+
+  "lesson5": [
+    {"hanzi":"哪","pinyin":"nǎ","en":"which"},
+    {"hanzi":"什么","pinyin":"shén me","en":"what"},
+    {"hanzi":"谁","pinyin":"shéi","en":"who"},
+    {"hanzi":"怎么","pinyin":"zěn me","en":"how"},
+    {"hanzi":"为什么","pinyin":"wèi shén me","en":"why"},
+    {"hanzi":"多少","pinyin":"duō shǎo","en":"how many"}
+  ],
+
+  "lesson6": [
+    {"hanzi":"大","pinyin":"dà","en":"big"},
+    {"hanzi":"小","pinyin":"xiǎo","en":"small"},
+    {"hanzi":"多","pinyin":"duō","en":"many"},
+    {"hanzi":"少","pinyin":"shǎo","en":"few"},
+    {"hanzi":"好","pinyin":"hǎo","en":"good"},
+    {"hanzi":"坏","pinyin":"huài","en":"bad"}
+  ],
+
+  "lesson7": [
+    {"hanzi":"吃","pinyin":"chī","en":"eat"},
+    {"hanzi":"喝","pinyin":"hē","en":"drink"},
+    {"hanzi":"看","pinyin":"kàn","en":"see"},
+    {"hanzi":"听","pinyin":"tīng","en":"listen"},
+    {"hanzi":"说","pinyin":"shuō","en":"speak"},
+    {"hanzi":"读","pinyin":"dú","en":"read"},
+    {"hanzi":"写","pinyin":"xiě","en":"write"}
+  ],
+
+  "lesson8": [
+    {"hanzi":"喜欢","pinyin":"xǐ huān","en":"like"},
+    {"hanzi":"爱","pinyin":"ài","en":"love"},
+    {"hanzi":"想","pinyin":"xiǎng","en":"want"},
+    {"hanzi":"要","pinyin":"yào","en":"want/need"},
+    {"hanzi":"会","pinyin":"huì","en":"can"},
+    {"hanzi":"能","pinyin":"néng","en":"able"}
+  ],
+
+  "lesson9": [
+    {"hanzi":"家","pinyin":"jiā","en":"home"},
+    {"hanzi":"学校","pinyin":"xué xiào","en":"school"},
+    {"hanzi":"中国","pinyin":"zhōng guó","en":"China"},
+    {"hanzi":"人","pinyin":"rén","en":"person"},
+    {"hanzi":"老师","pinyin":"lǎo shī","en":"teacher"},
+    {"hanzi":"学生","pinyin":"xué shēng","en":"student"}
+  ],
+
+  "lesson10": [
+    {"hanzi":"今天","pinyin":"jīn tiān","en":"today"},
+    {"hanzi":"明天","pinyin":"míng tiān","en":"tomorrow"},
+    {"hanzi":"昨天","pinyin":"zuó tiān","en":"yesterday"},
+    {"hanzi":"现在","pinyin":"xiàn zài","en":"now"},
+    {"hanzi":"时候","pinyin":"shí hou","en":"time"},
+    {"hanzi":"年","pinyin":"nián","en":"year"},
+    {"hanzi":"月","pinyin":"yuè","en":"month"},
+    {"hanzi":"日","pinyin":"rì","en":"day"}
   ]
 }
-
-,
-"lesson4": [
-  {"hanzi":"是","pinyin":"shì","en":"to be","audio":"https://translate.google.com/translate_tts?ie=UTF-8&q=是&tl=zh&client=tw-ob"},
-  {"hanzi":"不是","pinyin":"bú shì","en":"not be","audio":"https://translate.google.com/translate_tts?ie=UTF-8&q=不是&tl=zh&client=tw-ob"},
-  {"hanzi":"有","pinyin":"yǒu","en":"to have","audio":"https://translate.google.com/translate_tts?ie=UTF-8&q=有&tl=zh&client=tw-ob"},
-  {"hanzi":"没有","pinyin":"méi yǒu","en":"not have","audio":"https://translate.google.com/translate_tts?ie=UTF-8&q=没有&tl=zh&client=tw-ob"}
-],
-
-"lesson5": [
-  {"hanzi":"在","pinyin":"zài","en":"at/in","audio":"https://translate.google.com/translate_tts?ie=UTF-8&q=在&tl=zh&client=tw-ob"},
-  {"hanzi":"家","pinyin":"jiā","en":"home","audio":"https://translate.google.com/translate_tts?ie=UTF-8&q=家&tl=zh&client=tw-ob"},
-  {"hanzi":"学校","pinyin":"xué xiào","en":"school","audio":"https://translate.google.com/translate_tts?ie=UTF-8&q=学校&tl=zh&client=tw-ob"},
-  {"hanzi":"中国","pinyin":"zhōng guó","en":"China","audio":"https://translate.google.com/translate_tts?ie=UTF-8&q=中国&tl=zh&client=tw-ob"}
-],
-
-"lesson6": [
-  {"hanzi":"吃","pinyin":"chī","en":"eat","audio":"https://translate.google.com/translate_tts?ie=UTF-8&q=吃&tl=zh&client=tw-ob"},
-  {"hanzi":"喝","pinyin":"hē","en":"drink","audio":"https://translate.google.com/translate_tts?ie=UTF-8&q=喝&tl=zh&client=tw-ob"},
-  {"hanzi":"看","pinyin":"kàn","en":"see/watch","audio":"https://translate.google.com/translate_tts?ie=UTF-8&q=看&tl=zh&client=tw-ob"},
-  {"hanzi":"听","pinyin":"tīng","en":"listen","audio":"https://translate.google.com/translate_tts?ie=UTF-8&q=听&tl=zh&client=tw-ob"}
-],
-
-"lesson7": [
-  {"hanzi":"大","pinyin":"dà","en":"big","audio":"https://translate.google.com/translate_tts?ie=UTF-8&q=大&tl=zh&client=tw-ob"},
-  {"hanzi":"小","pinyin":"xiǎo","en":"small","audio":"https://translate.google.com/translate_tts?ie=UTF-8&q=小&tl=zh&client=tw-ob"},
-  {"hanzi":"多","pinyin":"duō","en":"many","audio":"https://translate.google.com/translate_tts?ie=UTF-8&q=多&tl=zh&client=tw-ob"},
-  {"hanzi":"少","pinyin":"shǎo","en":"few","audio":"https://translate.google.com/translate_tts?ie=UTF-8&q=少&tl=zh&client=tw-ob"}
-],
-
-"lesson8": [
-  {"hanzi":"这","pinyin":"zhè","en":"this","audio":"https://translate.google.com/translate_tts?ie=UTF-8&q=这&tl=zh&client=tw-ob"},
-  {"hanzi":"那","pinyin":"nà","en":"that","audio":"https://translate.google.com/translate_tts?ie=UTF-8&q=那&tl=zh&client=tw-ob"},
-  {"hanzi":"哪","pinyin":"nǎ","en":"which","audio":"https://translate.google.com/translate_tts?ie=UTF-8&q=哪&tl=zh&client=tw-ob"},
-  {"hanzi":"什么","pinyin":"shén me","en":"what","audio":"https://translate.google.com/translate_tts?ie=UTF-8&q=什么&tl=zh&client=tw-ob"}
-],
-
-"lesson9": [
-  {"hanzi":"谁","pinyin":"shéi","en":"who","audio":"https://translate.google.com/translate_tts?ie=UTF-8&q=谁&tl=zh&client=tw-ob"},
-  {"hanzi":"怎么","pinyin":"zěn me","en":"how","audio":"https://translate.google.com/translate_tts?ie=UTF-8&q=怎么&tl=zh&client=tw-ob"},
-  {"hanzi":"为什么","pinyin":"wèi shén me","en":"why","audio":"https://translate.google.com/translate_tts?ie=UTF-8&q=为什么&tl=zh&client=tw-ob"}
-],
-
-"lesson10": [
-  {"hanzi":"喜欢","pinyin":"xǐ huān","en":"like","audio":"https://translate.google.com/translate_tts?ie=UTF-8&q=喜欢&tl=zh&client=tw-ob"},
-  {"hanzi":"爱","pinyin":"ài","en":"love","audio":"https://translate.google.com/translate_tts?ie=UTF-8&q=爱&tl=zh&client=tw-ob"},
-  {"hanzi":"想","pinyin":"xiǎng","en":"want/think","audio":"https://translate.google.com/translate_tts?ie=UTF-8&q=想&tl=zh&client=tw-ob"}
-],
-  }
