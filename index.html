@@ -5,9 +5,23 @@
 <title>HSK App</title>
 
 <style>
-body { font-family: Arial; text-align: center; margin-top: 40px; }
-.card { border: 1px solid #ccc; padding: 30px; display: inline-block; cursor: pointer; }
-button { margin: 10px; padding: 10px 20px; }
+body {
+  font-family: Arial;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 30px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+}
 </style>
 
 </head>
@@ -16,10 +30,11 @@ button { margin: 10px; padding: 10px 20px; }
 
 <h2>HSK App</h2>
 
-<!-- LESSON BUTTON -->
+<!-- LESSON -->
 <div>
   <button onclick="changeLesson('lesson1')">Lesson 1</button>
   <button onclick="changeLesson('lesson2')">Lesson 2</button>
+  <button onclick="changeLesson('lesson3')">Lesson 3</button>
 </div>
 
 <!-- CARD -->
@@ -40,6 +55,7 @@ let currentLesson = "lesson1";
 let index = 0;
 let show = false;
 
+// LOAD DATA
 fetch("vocab.json")
   .then(res => res.json())
   .then(data => {
@@ -47,29 +63,41 @@ fetch("vocab.json")
     loadLesson();
   });
 
+// LOAD LESSON
 function loadLesson() {
   index = 0;
+  show = false;
   loadCard();
 }
 
+// LOAD CARD
 function loadCard() {
   const word = lessons[currentLesson][index];
+
   document.getElementById("hanzi").innerText = word.hanzi;
-  document.getElementById("pinyin").innerText = show ? word.pinyin : "";
-  document.getElementById("meaning").innerText = show ? word.en : "";
+
+  // 👇 Pinyin hiển thị khi click
+  document.getElementById("pinyin").innerText =
+    show ? word.pinyin : "";
+
+  document.getElementById("meaning").innerText =
+    show ? word.en : "";
 }
 
+// FLIP CARD
 function flipCard() {
   show = !show;
   loadCard();
 }
 
+// AUDIO
 function playAudio() {
   const word = lessons[currentLesson][index];
   let audio = new Audio(word.audio);
   audio.play();
 }
 
+// NEXT
 function nextCard() {
   index++;
   show = false;
@@ -82,6 +110,7 @@ function nextCard() {
   loadCard();
 }
 
+// CHANGE LESSON
 function changeLesson(l) {
   currentLesson = l;
   loadLesson();
